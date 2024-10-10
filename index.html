@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <title>HTML Forms</title>
+</head>
+
+<body>
+    <form class="container col-10 px-0 mt-5 m-auto border">
+        <!-------------------------------------Cabecera----------------------------------------------------->
+        <div class="bg-light px-3 border">
+            <h2>Payment form example</h2>
+        </div>
+        <!-------------------------------------Contenido---------------------------------------------------->
+        <!---------------------Alerta------------------>
+        <div class="alert alert-danger m-4 p-1" role="alert">
+            Some fields are missing
+        </div>
+        <!---------------------Formulario----------------->
+        <!----Fila 1---------------------------------->
+        <div class="row py-2 px-4">
+            <div class="col-5">
+                <label for="card" name="card" class="form-label">Card #</label>
+                <input type="text" class="form-control" id="card" placeholder="XXXXXXXXXXXXXXXX">
+            </div>
+            <div class="col-3">
+                <label for="cvc" name="cvc" class="form-label">CVC #</label>
+                <input type="text" class="form-control" id="cvc" placeholder="0000">
+            </div>
+            <div class="col-4">
+                <label for="amount" name="amount" class="form-label">Amount</label>
+                $<input type="text" class="form-control" id="amount" placeholder="0000">
+            </div>
+        </div>
+        <!----Fila 2---------------------------------->
+        <div class="row py-2 px-4">
+            <div class="col-6">
+                <label for="nombre" name="nombre" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="nombre">
+            </div>
+            <div class="col-6">
+                <label for="apellido" name="apellido" class="form-label">Last NAme</label>
+                <input type="text" class="form-control" id="apellido">
+            </div>
+        </div>
+        <!----Fila 3---------------------------------->
+        <div class="row py-2 px-4">
+            <div class="col-6">
+                <label for="city" name="city" class="form-label">City</label>
+                <input type="text" class="form-control" id="city">
+            </div>
+            <div class="col-3">
+                <label for="state" name="state" class="form-label">State</label>
+                <select class="form-select" id="state">
+                    <option selected>Pick a state</option>
+                    <option value="1">Spain</option>
+                    <option value="2">Francce</option>
+                    <option value="3">Italy</option>
+                </select>
+            </div>
+            <div class="col-3">
+                <label for="postal" name="postal" class="form-label">Postal Code</label>
+                <input type="text" class="form-control" id="postal">
+            </div>
+        </div>
+        <!----Fila 4---------------------------------->
+        <div class="container">
+            <div class="row">
+                <p class="col-6 mt-1 ps-4">We accept:</p>
+                <p class="col-6 mt-1">Message</p>
+            </div>
+            <!----Check Tarjetas---------------------------------->
+            <div class="row justify-content-between">
+                <div class="col-3 bg-secondary ms-4 mb-5 p-2 rounded d-flex flex-wrap justify-content-between">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="checkCards" id="master">
+                        <label class="form-check-label" for="master"><i
+                                class="fa-brands fa-cc-mastercard text-white"></i></label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="checkCards" id="visa">
+                        <label class="form-check-label" for="visa"><i
+                                class="fa-brands fa-cc-visa text-white"></i></label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="checkCards" id="diners">
+                        <label class="form-check-label" for="diners"><i
+                                class="fa-brands fa-cc-diners-club text-white"></i></label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="checkCards" id="american">
+                        <label class="form-check-label" for="american"><i
+                                class="fa-brands fa-cc-amex text-white"></i></label>
+                    </div>
+                </div>
+                <!----Area de texto---------------------------------->
+                <div class="col-6">
+                    <textarea class="form-control" aria-label="With textarea"></textarea>
+                    <p class="text-secondary">Add any notes here.</p>
+                </div>
+            </div>
+        </div>
+        <!-------------------------------------Pie del Formulario---------------------------------------------------->
+        <div class="bg-light px-3 py-2 border d-flex justify-content-end">
+            <button type="button" class="btn btn-secondary m-1 p-2">Cancel</button>
+            <button type="button" class="btn btn-primary m-1 p-2">Send</button>
+        </div>
+    </form>
+</body>
+
+</html>
